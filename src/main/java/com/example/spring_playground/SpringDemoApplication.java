@@ -1,13 +1,12 @@
-package com.example.springDemo;
+package com.example.spring_playground;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
 public class SpringDemoApplication {
 
     public static void main(String[] args) {
-        ApplicationContext apc = SpringApplication.run(SpringDemoApplication.class, args);
+        SpringApplication.run(SpringDemoApplication.class, args);
     }
 }

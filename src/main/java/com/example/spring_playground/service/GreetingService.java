@@ -1,5 +1,6 @@
-package com.example.springDemo;
+package com.example.spring_playground.service;
 
+import com.example.spring_playground.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 

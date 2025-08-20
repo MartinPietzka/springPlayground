@@ -1,5 +1,6 @@
-package com.example.springDemo;
+package com.example.spring_playground.controller;
 
+import com.example.spring_playground.service.GreetingService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,12 +15,12 @@ public class GreetingController {
 
 
     @GetMapping("/hello/{name}")
-    public String hello(@PathVariable String name) {
+    public String greet(@PathVariable String name) {
         return greetingService.greet(name);
     }
 
     @GetMapping("/helloToAll")
-    public String all() {
+    public String greetAll() {
         return greetingService.greetAll();
     }
 }
