@@ -27,19 +27,19 @@ class GreetingControllerWebTest {
     GreetingService greetingService = Mockito.mock(GreetingService.class);
 
     @Test
-    void greet() throws Exception {
+    void greetEndpoint_WhenCalledWithHans_ShouldReturnHalloHans() throws Exception {
         when(greetingService.greet("Hans")).thenReturn("Hallo, Hans!");
 
-        mvc.perform(get("/hello/Hans"))
+        mvc.perform(get("/greet/Hans"))
                 .andExpect(status().isOk())
                 .andExpect(content().string("Hallo, Hans!"));
     }
 
     @Test
-    void greetAll() throws Exception {
+    void greetAllEndpoint_WhenCalled_ShouldReturnMultipleGreetings() throws Exception {
         when(greetingService.greetAll()).thenReturn("Hallo Hans. Hallo Peter.");
 
-        mvc.perform(get("/helloToAll"))
+        mvc.perform(get("/greetAll"))
                 .andExpect(status().isOk())
                 .andExpect(content().string("Hallo Hans. Hallo Peter."));
     }
